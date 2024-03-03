@@ -39,7 +39,7 @@ let currentStudents=this.students.find(student=>student.id==id);
     currentStudents.age=newStudent.age??currentStudents.age;
     return currentStudents;
   }else{
-    console.log("there is no")
+    console.log("there is no id like that");
   }
     }
 }
@@ -52,3 +52,41 @@ console.log(Group.update(1,{
     surname:"ibadzade",
     age:19, 
 }));
+
+
+function  slicing(word,position){
+  let splitted=  word.split('');
+  splitted.splice(position, 1);
+  return splitted.join("");
+
+}
+console.log(slicing("python",2));
+
+
+function addingLetterToTheEndAndStart(word){
+console.log(`${word[word.length-1]}${word}${word[word.length-1]}`)
+}
+addingLetterToTheEndAndStart("red");
+
+function  task3(word){
+    let array=[];
+    let splitted=word.split("")
+    for (var i = splitted.length - 1; i >= 0; i--) {
+        array.push(splitted[i])
+    }
+  return  array.join("");
+}
+console.log(task3("python"));
+    const numbers = [10, 5, 7, 3, 15, 8];
+
+function task4(array){
+let max=0;
+let secondMax=0;
+for(let i=0;i<array.length;i++){
+    if(array[i]>max){
+        secondMax=max;
+        max=array[i];
+    }
+}
+return secondMax;
+}
