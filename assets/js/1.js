@@ -90,3 +90,45 @@ for(let i=0;i<array.length;i++){
 }
 return secondMax;
 }
+
+const person = {
+    name: "John",
+    age: 30,
+    city: "New York"
+  };
+  let counter="";
+  for(let x in person){
+    counter+=person[x];
+  }
+  console.log(counter);
+  let myString = JSON.stringify(person);
+  console.log(myString);
+  const person2 = {
+    name: "John",
+    age: 30,
+    city: "New York"
+  };
+  
+  const myArray = Object.values(person2);
+  console.log(myArray);
+  let person3 = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+
+  const person4 = {};
+person4.firstName = "John";
+person4.lastName = "Doe";
+person4.age = 50;
+person4.eyeColor = "blue";
+const person5 = new Object();
+person5.firstName = "John";
+person5.lastName = "Doe";
+person5.age = 50;
+person5.eyeColor = "blue";
+const myObj = {
+    name: "John",
+    age: 30,
+    cars: [
+      {name:"Ford", models:["Fiesta", "Focus", "Mustang"]},
+      {name:"BMW", models:["320", "X3", "X5"]},
+      {name:"Fiat", models:["500", "Panda"]}
+    ]
+  }
